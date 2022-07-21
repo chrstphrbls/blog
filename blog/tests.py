@@ -54,7 +54,7 @@ def test_post_create_view(self): #new
     self.assertContains(response,'New text')
 
 def test_post_update_view(self):
-    response = self.client.post(reverse('post_edit'.arfs='1'),{
+    response = self.client.post(reverse('post_edit',args='1'),{
         'title':'Updated title',
         'body':'Updated text',
     }),
