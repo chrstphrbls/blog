@@ -32,4 +32,4 @@ class BlogDeleteView(DeleteView):
     success_url = reverse_lazy('home')
 
 
-    
+
