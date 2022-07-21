@@ -1,9 +1,8 @@
 # blog/urls.py
 
-from unicodedata import name
 from django.urls import path
 
-from .views import BlogListView, BlogDetailView, BlogCreatView #new
+from .views import BlogListView,BlogDetailView,BlogCreateView #new
 
 urlpatterns = [
     path('post/new/',BlogCreateView.as_view(), name='post_new'), #new
