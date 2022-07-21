@@ -54,7 +54,7 @@ def test_post_create_view(self): #new
     self.assertContains(response,'New text')
 
 def test_post_update_view(self):
-    response = self.client.post(reverse('post_edit'.arfs='1'),{
+    response = self.client.post(reverse('post_edit',args='1'),{
         'title':'Updated title',
         'body':'Updated text',
     }),
@@ -62,9 +62,9 @@ def test_post_update_view(self):
 
 def test_post_delete_view(self):
     response = self.client.get(
-        reverse('post_delete',args='1')
-        self.assertEqual(response.status_code,200)
-    )
+        reverse('post_delete',args='1'))
+    self.assertEqual(response.status_code,200)
+    
 
 
 
