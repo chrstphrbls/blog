@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 # blog_project/settings.py
+from asyncio import format_helpers
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -32,7 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'blog.apps.BlogConfig', 
-    'accounts.apps.AccountConfig', #new
+    'accounts.apps.AccountsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -57,7 +58,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
-        'APP_DIRS': [os.path.join(BASE_DIR, 'templates')], #new
+        'APP_DIRS': [os.path.join(BASE_DIR, 'templates')], 
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
