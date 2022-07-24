@@ -39,14 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'whitenoise.runserver_nostatic', #heroku
+#    'whitenoise.runserver_nostatic', #heroku
     'django.contrib.staticfiles',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleWare' #hero
+ #   'whitenoise.middleware.WhiteNoiseMiddleWare' #hero
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'blog_project.wsgi.application'
+#WSGI_APPLICATION = 'blog_project.wsgi.application'
 
 
 # Database
@@ -126,7 +126,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles') #heroku
 STATIC_URL = '/static/'
 
 STATIC_DIRS = [os.path.join(BASE_DIR,'static')] #heroku
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' #heroku
+## STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' #heroku
 
 LOGIN_REDIRECT_URL = 'home' 
 LOGOUT_REDIRECT_URL = 'home'
